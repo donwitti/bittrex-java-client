@@ -1,11 +1,15 @@
 package de.elbatya.cryptocoins.bittrexclient.api.model.publicapi;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
  * @author contact@elbatya.de
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MarketSummary {
 
     private String marketName;
@@ -14,7 +18,7 @@ public class MarketSummary {
     private BigDecimal volume;
     private BigDecimal last;
     private BigDecimal baseVolume;
-    private LocalDateTime timeStamp;
+//    private LocalDateTime timeStamp;
     private BigDecimal bid;
     private BigDecimal ask;
     private Integer openBuyOrders;
@@ -111,13 +115,13 @@ public class MarketSummary {
         this.prevDay = prevDay;
     }
 
-    public LocalDateTime getTimeStamp() {
-        return timeStamp;
-    }
-
-    public void setTimeStamp(LocalDateTime timeStamp) {
-        this.timeStamp = timeStamp;
-    }
+//    public LocalDateTime getTimeStamp() {
+//        return timeStamp;
+//    }
+//
+//    public void setTimeStamp(LocalDateTime timeStamp) {
+//        this.timeStamp = timeStamp;
+//    }
 
     public LocalDateTime getCreated() {
         return created;
